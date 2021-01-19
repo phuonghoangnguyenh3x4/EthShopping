@@ -1,29 +1,48 @@
-# README #
+A shopping app based on Ethereum blockchain
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### Require ###
+  1. node js
+  2. npm
+  3. Ganache
+  4. Metamask wallet
+  5. Xampp (installed mysql)
+  6. go-ipfs (config to port 5001)
+  
+### How to run ###
+  1. run: 
+```
+npm i
+```
+to install node modules
 
-### What is this repository for? ###
+  2. run:
+```
+ipfs daemon
+```
+on Command Prompt or Terminal
+  
+  3. run:
+```
+rm -r uploads/*
+```
+to remove all uploaded images on server
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+  4. Create a new workspace on Ganache
+  
+  5. Connect Metamask to Ganache (localhost:7545)
+  
+  6. Import accounts to Metamask
+  
+  7. run:
+```
+node migrate.js
+```
+to migrate database.
 
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+  8. run:
+```
+node main.js
+```
+to start server (localhost:3000).
+  
+  
