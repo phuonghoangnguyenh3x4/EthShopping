@@ -35,11 +35,19 @@ to remove all uploaded images on server
   
   7. run:
 ```
+truffle compile
+truffle migrate
+```
+To compile smart contracts
+
+  
+  8. run:
+```
 node migrate.js
 ```
 to migrate database.
 
-  8. run:
+  9. run:
 ```
 node main.js
 ```
