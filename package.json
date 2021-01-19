@@ -1,0 +1,39 @@
+{
+  "name": "eth-shopping",
+  "version": "0.1.0",
+  "description": "An Ethereum Marketplace",
+  "author": "phuong.hoang.nguyen.h3x4@gmail.com",
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-preset-stage-3": "6.24.1",
+    "babel-register": "6.26.0",
+    "bignumber.js": "^9.0.1",
+    "bootstrap": "4.3.1",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "chai-bignumber": "3.0.0",
+    "eccrypto": "^1.1.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "ipfs-http-client": "^48.1.2",
+    "lite-server": "^2.6.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^1.17.3",
+    "truffle": "5.0.5",
+    "truffle-contract": "3.0.6",
+    "web3": "1.0.0-beta.55"
+  },
+  "scripts": {
+    "dev": "node main.js",
+    "test": "echo \"Error: no test specified\" && sexit 1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

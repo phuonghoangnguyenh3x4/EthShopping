@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <title>Đăng hàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="themes/css/bootstrappage.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min2.css"> -->
+    <link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <!-- global styles -->
+    <link href="themes/css/flexslider.css" rel="stylesheet" />
+    <link href="themes/css/main.css" rel="stylesheet" />
+
+    <!-- scripts -->
+    <script src="themes/js/jquery-1.7.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="themes/js/superfish.js"></script>
+    <script src="themes/js/jquery.scrolltotop.js"></script>
+    <!--[if lt IE 9]>			
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="js/respond.min.js"></script>
+        <![endif]-->
+        
+        <!-- ===================================================== -->
+	<script type="text/javascript" src="scripts/controllers/upload_controller.js"></script>
+
+    <script type="text/javascript" src="scripts/helpers/format_helper.js"></script>
+    <script src="contract_controllers/contract_controller.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+	<!-- ===================================================== -->
+</head>
+
+<body>
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="span4">
+                <form method="POST" class="search_form">
+                    <div class="input-group">
+
+
+                    </div>
+                </form>
+            </div>
+            <div class="span8">
+                <div class="account pull-right">
+                    <ul class="user-menu">
+                        <li><a href="upload.html">Đăng hàng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper" class="container">
+        <section class="navbar main-menu">
+            <div class="navbar-inner main-menu">
+                <a href="index.html" class="logo pull-left">
+                    <h4 class="title">ETH Shopping</h4>
+                </a>
+            </div>
+        </section>
+
+        <section class="header_text sub">
+            <img class="pageBanner" src="themes/images/carousel/slider_1.png" alt="New products">
+            <h4><span>Đăng hàng</span></h4>
+        </section>
+        <section class="main-content">
+            <div class="row">
+                <div class="span5">
+                    <div class="span4">
+                        <a href="images/default.jpg" class="thumbnail" data-fancybox-group="group1"
+                            title="Description 1"><img alt="" src="images/default.jpg"
+                            id="upload_img"></a>
+
+                        <br />
+
+                        <button tabindex="3" type="submit" class="btn btn-primary" onClick="onClickHandler(event)"
+                            style="margin:auto; display:block;"><i class="fa fa-upload"></i> Tải
+                            lên</button>
+                    </div>
+                </div>
+                <div class="span">
+                    <b style="font-size: 16pt">Thông tin chung</b>
+                    <br />
+                    <br />
+                    <form method="post" action="#">
+                        <fieldset>
+                            <div class="clearfix">
+                                <div class="input">
+                                    <label>Tên sản phẩm:</label>
+                                    <input tabindex="1" size="18" id="name" 
+                                    type="text" value=""
+                                        class="input-xlarge" placeholder="Tên sản phẩm" required>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="email"><span>Loại:</span></label>
+                                <div class="input">
+                                    <input tabindex="2" size="25" id="type"
+                                    type="text" value=""
+                                        class="input-xlarge" placeholder="Loại">
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="email"><span>Nhà sản xuất:</span></label>
+                                <div class="input">
+                                    <input tabindex="2" size="25" id="producer"
+                                    type="text" value=""
+                                        class="input-xlarge" placeholder="Nhà sản xuất">
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="email"><span>Số lượng:</span></label>
+                                <div class="input">
+                                    <input tabindex="2" size="25" id="remains" name="email" type="number" value=""
+                                        class="input-xlarge" placeholder="Số lượng" required>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="email"><span>Giá sản phẩm:</span></label>
+                                <div class="input">
+                                    <input tabindex="2" size="25" id="price" name="email" type="number" value=""
+                                        class="input-xlarge" placeholder="Giá sản phẩm" required>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="span">
+                    <div class="actions pull-right">
+                        <button tabindex="3" type="submit"
+                        onclick="App.onUploadProductClick()" class="btn btn-primary"
+                        id="upload_product_button">Đăng hàng</button>
+                    </div>
+                    <b style="font-size: 16pt"></b>
+                    <br />
+                    <br />
+                    <form method="post" action="#">
+                        <fieldset>
+
+                            <div class="clearfix">
+                                <label for="email"><span>
+                                        Nguồn gốc<i>(không bắt buộc)</i>:</span></label>
+                                <div style="width: 25vw">Nhấn <a href="./origin_create.html" target="_blank">vào đây</a> để tạo link nguồn gốc mới hoặc dùng link nguồn gốc từ người bán trước điền vào</div>
+
+                                <div class="input">
+                                    <input tabindex="2" size="25" id="origin" name="email" type="text" value=""
+                                        class="input-xlarge" placeholder="link">
+                                </div>
+
+                            </div>
+
+
+                            <div class="clearfix">
+                                <label for="email"><span>
+                                        Email:</span></label>
+                                <div class="input">
+                                    <input tabindex="2" size="25" id="email" name="email" type="email" value=""
+                                        class="input-xlarge" placeholder="john@gmail.com" required>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="phone"><span>
+                                        Số điện thoại:</span></label>
+                                <div class="input">
+                                    <input tabindex="2" size="25" id="phone" name="phone" type="tel" value=""
+                                        class="input-xlarge" placeholder="0987654321" required>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="message"><span>Miêu tả:</span></label>
+                                <div class="input">
+                                    <textarea tabindex="3" class="input-xlarge" id="description" name="body" rows="7"
+                                        placeholder="Viết gì đó ... "></textarea>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <section style="background-color: #857474;" id="footer-bar">
+            <div class="row">
+                <div class="span3">
+                    <h4>Điều Hướng</h4>
+                    <ul class="nav">
+                        <li><a href="./index.html">Trang chủ</a></li>
+                        <li><a href="./upload.html">Đăng hàng</a></li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <h4>Ví điện tử</h4>
+                    <ul class="nav">
+                        <li><a href="#">Địa chỉ ví</a></li>
+                        <li><a href="#">Lịch sử đặt hàng</a></li>
+                        <li><a href="#">Danh sách yêu thích</a></li>
+                    </ul>
+                </div>
+                <div class="span5">
+                        <!-- <img src="themes/images/logo.png" class="site_logo" alt=""> -->
+                    <h4 class="logo">ETH Shopping</h4>
+                    <p style="color: white;">ETH Shopping cung cấp dịch vụ giúp giao dịch sản phẩm bảo mật đảm bảo
+                        nguồn gốc thông qua công nghệ ETH</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="copyright">
+            <span>Copyright 2013 bootstrappage template All right reserved.</span>
+        </section>
+    </div>
+    <script src="themes/js/common.js"></script>
+</body>
+
+</html>

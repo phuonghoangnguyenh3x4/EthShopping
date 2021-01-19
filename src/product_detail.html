@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>ETH Shopping</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="themes/css/bootstrappage.css" rel="stylesheet" />
+
+	<!-- global styles -->
+	<link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min.css">
+	<link href="themes/css/main.css" rel="stylesheet" />
+	<link href="themes/css/jquery.fancybox.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min2.css"> -->
+	<link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min3.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+		integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<!-- scripts -->
+	<script src="themes/js/jquery-1.7.2.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="themes/js/superfish.js"></script>
+	<script src="themes/js/jquery.scrolltotop.js"></script>
+	<script src="themes/js/jquery.fancybox.js"></script>
+	<!--[if lt IE 9]>			
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+	<!-- ===================================================== -->
+	<script type="text/javascript" src="scripts/controllers/product_detail_controller.js"></script>
+
+	<script type="text/javascript" src="scripts/helpers/format_helper.js"></script>
+	<script type="text/javascript" src="scripts/helpers/hash.js"></script>
+	<script src="contract_controllers/contract_controller.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>	
+	<!-- ===================================================== -->
+</head>
+
+<body>
+	<div id="top-bar" class="container">
+		<div class="row">
+			<div class="span4">
+
+			</div>
+			<div class="span8">
+				<div class="account pull-right">
+					<ul class="user-menu">
+						<li><a href="upload.html">Đăng hàng</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper" class="container">
+		<section class="navbar main-menu">
+			<div class="navbar-inner main-menu">
+				<a href="index.html" class="logo pull-left">
+					<h4 class="title">ETH Shopping</h4>
+				</a>
+			</div>
+		</section>
+		<section class="header_text sub">
+			<img class="pageBanner" src="themes/images/carousel/slider_1.png" alt="New products">
+			<h4><span>Chi tiết sản phẩm</span></h4>
+		</section>
+
+
+
+
+
+
+		<section class="main-content">
+			<div class="row">
+				<div class="span9">
+					<div class="row">
+						<div class="span4">
+
+
+							<a id="main_image_a" href="themes/images/cloth/laptop1.png" class="thumbnail"
+								data-fancybox-group="group1"><img alt="" src="themes/images/cloth/laptop1.png"
+									id="main_image_img">
+							</a>
+						</div>
+
+
+						<div class="span5">
+							<address>
+								<strong>Tên sản phẩm:</strong> <span id="name"></span><br>
+								<strong>Nhà sãn xuất:</strong> <span id="producer"></span><br>
+								<strong>Tình trạng:</strong> <span id="stt"></span><br>
+								<strong>Loại:</strong> <span id="type"></span><br>
+								<strong>Email:</strong> <span id="email"></span><br>
+								<strong>Số điện thoại:</strong> <span id="phone"></span><br>
+								<strong>Nguồn gốc:</strong> <a id="origin" href="./origin_show.html"></a><br>
+							</address>
+							<h4><strong id="price">Giá: </strong></h4>
+						</div>
+						<div class="span5">
+							<form class="form-inline">
+								<p>&nbsp;</p>
+								<label>SL:</label>
+								<input type="text" class="span1" placeholder="1" id="sl">
+							</form>
+							<button class="btn btn-inverse" id="buy_btn" onclick="App.onBuyButtonClick()">Mua</button>
+							<button class="btn btn-inverse" id="edit_btn" onclick="onEditButtonClick()">Sửa</button>
+
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<div class="span9">
+							<ul class="nav nav-tabs" id="myTab">
+								<li class="active"><a href="#home">Miêu tả</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="description">Laptop ASUS VivoBook S410UA là sự kết hợp
+									hoàn
+									hảo giữa vẻ đẹp và
+									hiệu năng. Với thiết kế viền máy NanoEdge mỏng, cùng vỏ ngoài hoàn thiện với chất
+									liệu kim loại, máy
+									lý tưởng để đồng hành cùng bạn trên khắp nẻo đường. ASUS VivoBook S410UA được trang
+									bị một cấu hình
+									mạnh mẽ đáp ứng được mọi tác vụ đa dạng và phức tạp, hoàn toàn thích hợp cho nhu cầu
+									làm việc lẫn giải
+									trí của người dùng. </div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<section style="background-color: #857474;" id="footer-bar">
+			<div class="row">
+				<div class="span3">
+					<h4>Điều Hướng</h4>
+					<ul class="nav">
+						<li><a href="./index.html">Trang chủ</a></li>
+						<li><a href="./upload.html">Đăng hàng</a></li>
+					</ul>
+				</div>
+				<div class="span4">
+					<h4>Ví Điện Tử</h4>
+					<ul class="nav">
+						<li><a href="#">Địa chỉ ví</a></li>
+						<li><a href="#">Lịch sử đặt hàng</a></li>
+						<li><a href="#">Danh sách yêu thích</a></li>
+					</ul>
+				</div>
+				<div class="span5">	
+				    <h4 class="logo">ETH Shopping</h4>
+					<p style="color: white;">ETH Shopping cung cấp dịch vụ giúp giao dịch sản phẩm bảo mật đảm bảo nguồn
+						gốc
+						thông qua công nghệ ETH</p>
+
+				</div>
+			</div>
+		</section>
+
+		<section id="copyright">
+			<span>Copyright 2013 bootstrappage template All right reserved.</span>
+		</section>
+	</div>
+	<script src="themes/js/common.js"></script>
+	<script>
+		$(function () {
+			$('#myTab a:first').tab('show');
+			$('#myTab a').click(function (e) {
+				e.preventDefault();
+				$(this).tab('show');
+			})
+		})
+		$(document).ready(function () {
+			$('.thumbnail').fancybox({
+				openEffect: 'none',
+				closeEffect: 'none'
+			});
+
+			$('#myCarousel-2').carousel({
+				interval: 2500
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>ETH shopping</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+	<!-- bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min2.css"> -->
+	<link rel="stylesheet" type="text/css" href="themes/css/font-awesome.min3.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+		integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link href="themes/css/bootstrappage.css" rel="stylesheet" />
+
+	<!-- global styles -->
+	<link href="themes/css/flexslider.css" rel="stylesheet" />
+	<link href="themes/css/main.css" rel="stylesheet" />
+
+	<!-- scripts -->
+	<script src="themes/js/jquery-1.7.2.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="themes/js/superfish.js"></script>
+	<script src="themes/js/jquery.scrolltotop.js"></script>
+
+	<!--[if lt IE 9]>			
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+
+	<!-- 
+		for controller
+	 -->
+	<!-- ===================================================== -->
+	<script type="text/javascript" src="scripts/controllers/home_controller.js"></script>
+
+	<script type="text/javascript" src="scripts/helpers/format_helper.js"></script>
+	<script src="contract_controllers/contract_controller.js"></script>
+	<script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+	<!-- ===================================================== -->
+</head>
+
+<body>
+	<div id="top-bar" class="container">
+		<div class="row">
+			<div class="span4"></div>
+			<div class="span8">
+				<div class="account pull-right">
+					<ul class="user-menu">
+						<li><a href="upload.html">Đăng hàng</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper" class="container">
+		<section class="navbar main-menu">
+			<div class="navbar-inner main-menu">
+				<a href="index.html" class="logo pull-left">
+					<h4 class="title">ETH Shopping</h4>
+				</a>
+			</div>
+		</section>
+		<section class="homepage-slider" id="home-slider">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="themes/images/carousel/slider_1.png" alt="anh bia 1" />
+						<div class="intro">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="header_text">
+			ETH Shopping cung cấp dịch vụ giúp giao dịch sản phẩm bảo mật đảm bảo nguồn gốc thông qua công nghệ ETH
+		</section>
+
+		<section class="main-content">
+			<div class="row">
+				<br />
+				<div class="span4 pull-right">
+					<form method="GET" class="search_form">
+						<div class="input-group">
+							<input type="text" id="search" class="search-query form-control input-group"
+								onkeyup="createGridView()" Placeholder="Search">
+							<span class="input-group-btn">
+
+
+
+								<button class="btn btn-primary rounded-circle btnpro" type="button" id="btn-search">
+
+
+
+									<span class="fa fa-search"></span>
+
+
+								</button>
+
+
+							</span>
+
+						</div>
+					</form>
+				</div>
+				<br />
+				<div class="span12">
+					<h4 class="title">
+						<span class="pull-left"><span class="text"><span class="line"><strong>Các sản
+										phẩm</strong></span></span>
+						</span>
+					</h4>
+
+					<div class="row">
+						<div class="span12" id="product_col">
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+		</section>
+		<div class="row feature_box">
+			<div class="span4">
+				<div class="service">
+					<div class="responsive">
+						<img src="themes/images/feature_img_2.png" alt="" />
+						<h4>ĐẢM BẢO <strong>NGUỒN GỐC</strong> SẢN PHẨM</h4>
+						<p>Sử dụng blockchain giúp đảm bảo thông tin về nguồn gốc sản phẩm. </p>
+					</div>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="service">
+					<div class="customize">
+						<img src="themes/images/feature_img_1.png" alt="" />
+						<h4>GIAO DỊCH <strong>BẢO MẬT</strong></h4>
+						<p>Dùng các kĩ thuật mã hóa trong quá trình giao dịch.</p>
+					</div>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="service">
+					<div class="support">
+						<img src="themes/images/feature_img_3.png" alt="" />
+						<h4>SỬ DỤNG <strong>TIỀN ẢO</strong></h4>
+						<p>Sử dụng tiền etherium trong giao dịch.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="themes/js/common.js"></script>
+<script src="themes/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$(document).ready(function () {
+			$('.flexslider').flexslider({
+				animation: "fade",
+				slideshowSpeed: 4000,
+				animationSpeed: 600,
+				controlNav: false,
+				directionNav: true,
+				controlsContainer: ".flex-container" // the container that holds the flexslider
+			});
+		});
+	});
+</script>
+</body>
+
+</html>
