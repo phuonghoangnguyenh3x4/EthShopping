@@ -38,7 +38,7 @@ to remove all uploaded images on server
 truffle compile
 truffle migrate
 ```
-To compile smart contracts
+to compile smart contracts
 
   
   8. run:
@@ -53,4 +53,4 @@ node main.js
 ```
 to start server (localhost:3000).
   
-  
+### To get helps, send email to phuong.hoang.nguyen.h3x4@gmail.com ###
